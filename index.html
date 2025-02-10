@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Request</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: red;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: red;
+            color: white;
+        }
+        .no {
+            background-color: gray;
+            color: white;
+        }
+        #loveMessage {
+            display: none;
+            font-size: 24px;
+            color: red;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <button class="yes" onclick="showLove()">Yes</button>
+        <button class="no" onclick="shrinkNo(this)">No</button>
+        <p id="loveMessage">I LOVE YOU! ❤️</p>
+    </div>
+
+    <script>
+        function showLove() {
+            document.getElementById('loveMessage').style.display = 'block';
+        }
+
+        function shrinkNo(button) {
+            button.style.transform = "scale(0.5)";
+        }
+    </script>
+
+</body>
+</html>
